@@ -6,8 +6,8 @@ table.table.table-striped
   tbody
 - @ttns.each do |f|
     tr
-      td= f.date_in.strftime("%B %e, %Y")
-      td= f.date_out.strftime("%B %e, %Y")
+      td= f.date_in
+      td= f.date_out
       td= f.good
       td= f.point_in
       td= f.point_out
@@ -28,4 +28,5 @@ table.table.table-striped
       td= f.sto_233
       td= f.availability_ttn
       td= link_to t('.edit_ttn'), edit_ttn_path(f)
-      td= link_to "delete", f, method: :delete
+      td
+        = link_to t('.delete'), f, confirm: t('.are_you_sure'), method: :delete

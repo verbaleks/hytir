@@ -1,0 +1,16 @@
+ru:
+  layouts:
+    application:
+      navigation:
+        edit_user: 'Редактировать пользователя'
+        logout: 'Выйти'
+        login: 'Войти'
+        ttns: 'ТТН'
+        add_new_ttn: 'Добавить новую ТТН'
+  ttns:
+    index:
+      delete: 'Удалить'
+      are_you_sure: 'Вы уверены?'
+      edit_ttn: 'Изменить'
+    edit:
+      date_in: 'Дата'
