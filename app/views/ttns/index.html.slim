@@ -1,0 +1,31 @@
+table.table.table-striped
+  thead
+    tr
+      th
+
+  tbody
+- @ttns.each do |f|
+    tr
+      td= f.date_in.strftime("%B %e, %Y")
+      td= f.date_out.strftime("%B %e, %Y")
+      td= f.good
+      td= f.point_in
+      td= f.point_out
+      td= f.invoice_in
+      td= f.invoice_out
+      td= f.driver
+      td= f.car_number
+      td= f.weight_in
+      td= f.weight_out
+      td= f.weight_difference
+      td= f.distance
+      td= f.diesel
+      td= f.organization_in
+      td= f.organization_out
+      td= f.realization_231
+      td= f.services_903
+      td= f.store_28
+      td= f.sto_233
+      td= f.availability_ttn
+      td= link_to t('.edit_ttn'), edit_ttn_path(f)
+      td= link_to "delete", f, method: :delete

@@ -1,0 +1,12 @@
+header.navbar.box-shadow
+  nav.navbar-inner
+    .pull-right
+      - if current_user
+      	= link_to t('.logout'), logout_path, method: :delete, class: :btn
+      - else
+        = link_to t('.login'), login_path, class: :btn
+    ul.nav.pull-right
+      - if current_user
+        li= link_to t('.edit_user'), edit_user_path(current_user.id)
+        li= link_to t('.ttns'), ttns_path
+        li= link_to t('.add_new_ttn'), new_ttn_path

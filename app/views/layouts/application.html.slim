@@ -1,0 +1,14 @@
+doctype html
+html
+  = render 'layouts/application/head'
+  body
+    #main.container-fluid role="main"
+      = render 'layouts/application/navigation'
+      .bordered.box-shadow
+        .content
+          .row-fluid
+            .span12
+              = render 'layouts/application/messages'
+              .row-fluid
+                .span12
+                  = yield

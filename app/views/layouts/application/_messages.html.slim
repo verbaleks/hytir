@@ -1,0 +1,7 @@
+#messagebox
+  - flash.each do |name, msg|
+    .notification
+      #messagebox_wrapper
+        .container.text-center.message
+          a.close data-dismiss="alert" ×
+          = content_tag :div, msg, id: "flash_#{name}"

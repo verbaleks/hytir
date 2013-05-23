@@ -1,0 +1,6 @@
+// Define bootstrap varibles before importing bootstrap
+$gridColumnWidth: 70px;
+$gridGutterWidth: 30px;
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
