@@ -1,5 +1,5 @@
 .container-fluid
-= form_tag sessions_path do |f|
+= form_tag sessions_path, html: {class: 'form-horizontal'} do |f|
   .row-fluid
     .span2
       = label_tag :login
