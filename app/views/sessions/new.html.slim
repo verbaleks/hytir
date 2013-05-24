@@ -1,7 +1,4 @@
 .container-fluid
-  .row-fluid
-    .span8
-    = link_to 'new user', new_user_path
 = form_tag sessions_path do |f|
   .row-fluid
     .span2
@@ -12,7 +9,7 @@
     .span2
       = label_tag :password
     .span4
-      = text_field_tag :password
+      = password_field_tag :password
   .row-fluid
     .span4.offset4
       = submit_tag "log in"
