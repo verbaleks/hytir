@@ -10,8 +10,4 @@ test:
   host: localhost
   username: postgres
   password: password
-production:
-  databse: darlpqj5vpv8jh
-  host: ec2-107-20-217-22.compute-1.amazonaws.com
-  user: mfctlsyogrgdkq
-  password: t4iR4ooe7ewohsHf2XlX6QtOjm
+
