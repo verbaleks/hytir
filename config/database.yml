@@ -12,5 +12,6 @@ test:
   password: password
 production:
   adapter: postgresql
-  database: hytir
-  host: localhost
+  database: darlpqj5vpv8jh
+  username: mfctlsyogrgdkq
+  password:  t4iR4ooe7ewohsHf2XlX6QtOjm
