@@ -33,5 +33,9 @@ ru:
       store_28: 'Склад(28)'
       sto_233: 'СТО(233)'
       availability_ttn: 'Наявність ТТН'
-    edit:
-      date_in: 'Дата'
+  sessions:
+    new:
+      login: 'Логин'
+      password: 'Пароль'
+      log_in: 'Войти'
+  invalid_login_or_pass: 'Неправильный логин или пароль'

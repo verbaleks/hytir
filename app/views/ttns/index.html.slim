@@ -1,4 +1,4 @@
-table.table.table-striped
+table.table.table-striped.table-bordered.table-hover
   thead
     tr
       th= t('.date_in')
@@ -26,7 +26,35 @@ table.table.table-striped
       th
   tbody
     - @ttns.each do |f|
-        tr
+      - if f.availability_ttn
+        tr.success
+          td= f.date_in
+          td= f.date_out
+          td= f.good
+          td= f.point_in
+          td= f.point_out
+          td= f.invoice_in
+          td= f.invoice_out
+          td= f.driver
+          td= f.car_number
+          td= f.weight_in
+          td= f.weight_out
+          td= f.weight_difference
+          td= f.distance
+          td= f.diesel
+          td= f.organization_in
+          td= f.organization_out
+          td= f.realization_231
+          td= f.services_903
+          td= f.store_28
+          td= f.sto_233
+          td= f.availability_ttn
+
+          td= link_to t('.edit_ttn'), edit_ttn_path(f)
+          td
+            = link_to t('.delete'), f, confirm: t('.are_you_sure'), method: :delete
+      - else
+        tr.error
           td= f.date_in
           td= f.date_out
           td= f.good

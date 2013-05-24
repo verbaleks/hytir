@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to ttns_path
     else
+      flash.now[:error] = I18n.t('invalid_login_or_pass')
       render action: :new
     end
   end
