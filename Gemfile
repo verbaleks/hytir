@@ -5,13 +5,13 @@ gem 'pg'
 gem 'slim' # A lightweight templating engine
 gem 'slim-rails' # A lightweight templating engine
 gem 'russian'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass' # Sass-powered version of Twitter's Bootstrap
   gem 'uglifier', '>= 1.0.3'
-  gem 'simple_form'
 end
 
 gem 'jquery-rails'
