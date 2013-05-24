@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'mysql2'
+gem 'pg'
 gem 'slim' # A lightweight templating engine
 gem 'slim-rails' # A lightweight templating engine
-gem 'heroku'
+gem 'russian'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
