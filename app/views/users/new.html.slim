@@ -1,18 +1,8 @@
-.container
-= form_for @user do |f|
-  = f.label :first_name
-  = f.text_field :first_name
-  = f.label :last_name
-  = f.text_field :last_name
-  = f.label :login
-  = f.text_field :login
-  = f.label :password
-  = f.password_field :password
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-  = f.label :email
-  = f.email_field :email
-  = f.submit
-
-
-= link_to 'back to login', new_session_path
+= simple_form_for @user, html: {class: 'form-horizontal'} do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :login
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :email
+  = f.button :submit
