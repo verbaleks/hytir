@@ -4,6 +4,7 @@ Hytir::Application.routes.draw do
   resources :users
   resources :sessions
   resources :ttns
+  resources :drivers
 
   # Sample resource route with sub-resources:
   #   resources :products do

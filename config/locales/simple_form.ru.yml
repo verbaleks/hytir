@@ -12,6 +12,8 @@ ru:
       default_message: "Some errors were found, please take a look:"
     labels:
       ttn:
+        visible: 'Видимість'
+        type_of: 'Тип'
         date_in: 'Дата навантаження'
         date_out: 'Дата розвантаження'
         good: 'Товар'
@@ -19,17 +21,20 @@ ru:
         point_out: 'Пункт розвантаження'
         invoice_in: '№ накладної приход'
         invoice_out: '№ накладної расход'
-        driver: 'ПІБ водія'
+        driver_id: 'ПІБ водія'
         car_number: '№ машини'
         weight_in: 'Вага приход'
         weight_out: 'Вага расход'
         weight_difference: 'Різниця'
         distance: 'КМ'
         diesel: 'Дизпаливо'
-        organization_in: 'Організація, в кого купили'
-        organization_out: 'Організація, кому продали'
+        organization_in: 'Організація приход'
+        organization_out: 'Організація расход'
         realization_231: 'Реалізація(231)'
         services_903: 'Послуги(903)'
         store_28: 'Склад(28)'
         sto_233: 'СТО(233)'
-        availability_ttn: 'Наявність ТТН'
+        availability_ttn_in: 'Наявність ТТН приход'
+        availability_ttn_out: 'Наявність ТТН расход'
+      driver:
+        name: 'ФІО'

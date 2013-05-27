@@ -22,4 +22,5 @@ group :development, :test do
   gem 'ffaker' # Library for generating fake data
   gem 'shoulda-matchers' # Collection of testing matchers extracted
   gem 'simplecov', require: false # Code coverage tool
+  gem 'pry' # An IRB alternative and runtime developer console
 end

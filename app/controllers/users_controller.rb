@@ -14,13 +14,14 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to new_session_path
     else
-      render :action => :new
+      flash.now[:error] = I18n.t('invalid_login_or_pass')
+      render action: :new
     end
   end
 
   def edit
     @user = User.find(params[:id])
-    render :action => :new
+    render action: :new
   end
 
   def update

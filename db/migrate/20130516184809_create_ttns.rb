@@ -1,6 +1,8 @@
 class CreateTtns < ActiveRecord::Migration
   def change
     create_table :ttns do |t|
+      t.integer     :type_of
+      t.boolean     :visible
       t.date        :date_in
       t.date        :date_out
       t.string      :good
@@ -8,7 +10,7 @@ class CreateTtns < ActiveRecord::Migration
       t.string      :point_out
       t.integer     :invoice_in
       t.integer     :invoice_out
-      t.string      :driver
+      t.integer     :driver_id
       t.string      :car_number
       t.integer     :weight_in
       t.integer     :weight_out
@@ -21,7 +23,8 @@ class CreateTtns < ActiveRecord::Migration
       t.integer     :services_903
       t.integer     :store_28
       t.integer     :sto_233
-      t.boolean     :availability_ttn
+      t.boolean     :availability_ttn_in
+      t.boolean     :availability_ttn_out
       t.integer     :user_id
       t.timestamps
     end

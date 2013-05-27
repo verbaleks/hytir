@@ -1,6 +1,8 @@
 table.table.table-striped.table-bordered.table-hover
   thead
     tr
+      th= t('.visible')
+      th= t('.type_of')
       th= t('.date_in')
       th= t('.date_out')
       th= t('.good')
@@ -21,13 +23,16 @@ table.table.table-striped.table-bordered.table-hover
       th= t('.services_903')
       th= t('.store_28')
       th= t('.sto_233')
-      th= t('.availability_ttn')
+      th= t('.availability_ttn_in')
+      th= t('.availability_ttn_out')
       th
       th
   tbody
     - @ttns.each do |f|
-      - if f.availability_ttn
+      - if f.availability_ttn_in && f.availability_ttn_out
         tr.success
+          td= f.visible
+          td= f.type_of
           td= f.date_in
           td= f.date_out
           td= f.good
@@ -35,7 +40,7 @@ table.table.table-striped.table-bordered.table-hover
           td= f.point_out
           td= f.invoice_in
           td= f.invoice_out
-          td= f.driver
+          td= f.driver.name
           td= f.car_number
           td= f.weight_in
           td= f.weight_out
@@ -48,13 +53,17 @@ table.table.table-striped.table-bordered.table-hover
           td= f.services_903
           td= f.store_28
           td= f.sto_233
-          td= f.availability_ttn
-
-          td= link_to t('.edit_ttn'), edit_ttn_path(f)
+          td= f.availability_ttn_in
+          td= f.availability_ttn_out
+          td= link_to edit_ttn_path(f) do
+              i.icon-pencil
           td
-            = link_to t('.delete'), f, confirm: t('.are_you_sure'), method: :delete
+            = link_to f, confirm: t('.are_you_sure'), method: :delete do
+              i.icon-remove
       - else
         tr.error
+          td= f.visible
+          td= f.type_of
           td= f.date_in
           td= f.date_out
           td= f.good
@@ -62,7 +71,7 @@ table.table.table-striped.table-bordered.table-hover
           td= f.point_out
           td= f.invoice_in
           td= f.invoice_out
-          td= f.driver
+          td= f.driver.name
           td= f.car_number
           td= f.weight_in
           td= f.weight_out
@@ -75,8 +84,11 @@ table.table.table-striped.table-bordered.table-hover
           td= f.services_903
           td= f.store_28
           td= f.sto_233
-          td= f.availability_ttn
+          td= f.availability_ttn_in
+          td= f.availability_ttn_out
 
-          td= link_to t('.edit_ttn'), edit_ttn_path(f)
+          td= link_to edit_ttn_path(f) do
+              i.icon-pencil
           td
-            = link_to t('.delete'), f, confirm: t('.are_you_sure'), method: :delete
+            = link_to f, confirm: t('.are_you_sure'), method: :delete do
+              i.icon-remove
