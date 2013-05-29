@@ -9,7 +9,7 @@ ru:
         add_new_ttn: 'Додати нову ТТН'
         drivers: 'Водії'
   ttns:
-    index:
+    all_ttns:
       visible: 'Видимість'
       type_of: 'Тип'
       delete: 'Удалить'

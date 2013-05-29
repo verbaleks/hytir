@@ -1,6 +1,6 @@
 = simple_form_for @ttn, html: {class: 'form-horizontal'} do |f|
   = f.input :visible
-  = f.input :type_of, collection: [ [1, 'Послуги' ], [2, 'Реалізація'] ], as: :radio_buttons, label_method: :last, value_method: :first, checked: @ttn.type_of, item_wrapper_class: 'inline'
+  = f.input :type_of, collection: [ [1, 'Послуги' ], [2, 'Реалізація'], [3, 'Склад'] ], as: :radio_buttons, label_method: :last, value_method: :first, checked: @ttn.type_of, item_wrapper_class: 'inline'
   = f.input :date_in
   = f.input :date_out
   = f.input :good

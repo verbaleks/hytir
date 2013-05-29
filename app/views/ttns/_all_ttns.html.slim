@@ -1,0 +1,62 @@
+.row-fluid
+  .span12
+    table.table.table-striped.table-bordered.table-hover
+      thead
+        tr
+          th= t('.visible')
+          th= t('.type_of')
+          th= t('.date_in')
+          th= t('.date_out')
+          th= t('.good')
+          th= t('.point_in')
+          th= t('.point_out')
+          th= t('.invoice_in')
+          th= t('.invoice_out')
+          th= t('.driver')
+          th= t('.car_number')
+          th= t('.weight_in')
+          th= t('.weight_out')
+          th= t('.weight_difference')
+          th= t('.distance')
+          th= t('.diesel')
+          th= t('.organization_in')
+          th= t('.organization_out')
+          th= t('.realization_231')
+          th= t('.services_903')
+          th= t('.store_28')
+          th= t('.sto_233')
+          th= t('.availability_ttn_in')
+          th= t('.availability_ttn_out')
+          th
+          th
+      tbody
+        - @ttns.each do |f|
+          tr class="#{f.availability_ttn_in && f.availability_ttn_out ? 'success' : 'error'}"
+            td= f.visible
+            td= f.type_of
+            td= f.date_in
+            td= f.date_out
+            td= f.good
+            td= f.point_in
+            td= f.point_out
+            td= f.invoice_in
+            td= f.invoice_out
+            td= link_to f.driver.name, ttns_path( driver: f.driver.id )
+            td= f.car_number
+            td= f.weight_in
+            td= f.weight_out
+            td= f.weight_difference
+            td= f.distance
+            td= f.diesel
+            td= f.organization_in
+            td= f.organization_out
+            td= f.realization_231
+            td= f.services_903
+            td= f.store_28
+            td= f.sto_233
+            td= f.availability_ttn_in
+            td= f.availability_ttn_out
+            td= link_to edit_ttn_path(f) do
+              i.icon-pencil
+            td= link_to f, confirm: t('.are_you_sure'), method: :delete do
+              i.icon-remove

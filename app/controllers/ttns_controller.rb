@@ -5,7 +5,8 @@ class TtnsController < ApplicationController
   end
 
   def index
-    @ttns = Ttn.all
+    @ttns = Ttn.filter_by_params(params)
+    @drivers = Driver.all
   end
 
   def create
