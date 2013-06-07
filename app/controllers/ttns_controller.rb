@@ -2,7 +2,6 @@ class TtnsController < ApplicationController
 
   def new
     @ttn = Ttn.new
-    @lists = List.all.map { |list| [list.number, list.id] }
   end
 
   def index
@@ -23,7 +22,6 @@ class TtnsController < ApplicationController
 
   def edit
     @ttn = Ttn.find(params[:id])
-    @lists = List.where(driver_id: @ttn.driver_id).map { |list| [list.number, list.id] }
     render action: :new
   end
 
