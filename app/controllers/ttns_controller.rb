@@ -2,7 +2,7 @@ class TtnsController < ApplicationController
 
   def new
     @ttn = Ttn.new
-    @lists = List.all
+    @lists = List.all.map { |list| [list.number, list.id] }
   end
 
   def index
@@ -23,12 +23,11 @@ class TtnsController < ApplicationController
 
   def edit
     @ttn = Ttn.find(params[:id])
-    @lists = List.where(driver_id: @ttn.driver_id).map { |item| [item.number,item.id] }
+    @lists = List.where(driver_id: @ttn.driver_id).map { |list| [list.number, list.id] }
     render action: :new
   end
 
   def update
-    binding.pry
     @ttn = Ttn.find(params[:id])
     @ttn.update_attributes(params[:ttn])
     redirect_to ttns_path
