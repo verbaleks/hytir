@@ -8,6 +8,9 @@ ru:
         ttns: 'ТТН'
         add_new_ttn: 'Додати нову ТТН'
         drivers: 'Водії'
+        organizations: 'Організації'
+        lists: 'Путівки'
+        transports: 'Автопідприємство'
   ttns:
     all_ttns:
       visible: 'Видимість'
@@ -29,6 +32,8 @@ ru:
       weight_difference: 'Різниця'
       distance: 'КМ'
       diesel: 'Дизпаливо'
+      transport: 'Автопідприємство'
+      customer: 'Замовник'
       organization_in: 'Організація приход'
       organization_out: 'Організація расход'
       realization_231: 'Реалізація(231)'
@@ -37,6 +42,14 @@ ru:
       sto_233: 'СТО(233)'
       availability_ttn_in: 'Наявність ТТН приход'
       availability_ttn_out: 'Наявність ТТН расход'
+      list: 'Путівка'
+    search_form:
+      visibility: 'ВИДИМІСТЬ'
+      driver: 'ВОДІЙ'
+      type: 'ТИП'
+      organization_in_id: 'ОРГАНІЗАЦІЯ ПРИХОД'
+      organization_out_id: 'ОРГАНІЗАЦІЯ РАСХОД'
+      filter: 'фільтр'
   sessions:
     new:
       login: 'Логін'
@@ -50,5 +63,34 @@ ru:
     index:
       new_driver: 'Новий водій'
       name: 'ФІО'
+      id: 'Номер п\п'
+      are_you_sure: 'Ви впевнені?'
+  organizations:
+        new:
+          name: 'Назва'
+          organizations_create_error: 'Помилка створення нової організації'
+        index:
+          new_organization: 'Нова організація'
+          name: 'Назва'
+          id: 'Номер п\п'
+          are_you_sure: 'Ви впевнені?'
+  lists:
+      new:
+        number: 'Номер путівки'
+        driver: 'ПІБ водія'
+        list_create_error: 'Помилка створення нової путівки'
+      index:
+        new_list: 'Нова путівка'
+        number: 'Номер путівки'
+        id: 'Номер п\п'
+        driver: 'Водій'
+        are_you_sure: 'Ви впевнені?'
+  transports:
+    new:
+      name: 'Назва'
+      transport_create_error: 'Помилка створення автопідприємства'
+    index:
+      new_transport: 'Новие автопідприємство'
+      name: 'Назва'
       id: 'Номер п\п'
       are_you_sure: 'Ви впевнені?'

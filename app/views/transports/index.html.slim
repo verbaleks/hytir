@@ -1,0 +1,23 @@
+.row-fluid
+  .span2
+    = link_to t('.new_transport'), new_transport_path, class: 'btn btn-primary btn-large'
+.row-fluid
+  .span12
+    '
+.row-fluid
+  .span12
+    table.table-striped.table-hover.table-bordered
+      thead
+        th= t('.id')
+        th= t('.name')
+        th
+        th
+      tbody
+        - @transports.each do |transport|
+          tr
+            td= transport.id
+            td= transport.name
+            td= link_to edit_transport_path(transport) do
+              i.icon-pencil
+            td= link_to transport, confirm: t('.are_you_sure'), method: :delete do
+              i.icon-remove

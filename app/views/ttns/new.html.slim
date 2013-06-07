@@ -8,22 +8,22 @@
   = f.input :point_out
   = f.input :invoice_in
   = f.input :invoice_out
-  = f.input :driver_id, collection: Driver.all, include_blank: false
+  = f.association :driver, collection: Driver.all(order: 'name'), include_blank: false
   = f.input :car_number
   = f.input :weight_in
   = f.input :weight_out
-  - if f.object.weight_in && f.object.weight_out
-    = f.input :weight_difference, :input_html => {value: (f.object.weight_in - f.object.weight_out ) }
-  - else
-    = f.input :weight_difference, disabled: true
+  = f.input :weight_difference, disabled: true
   = f.input :distance
   = f.input :diesel
-  = f.input :organization_in
-  = f.input :organization_out
+  = f.association :transport, collection: Transport.all(order: 'name'), include_blank: false
+  = f.input :customer_id, collection: Organization.all(order: 'name'), include_blank: false
+  = f.association :organization_in, collection: Organization.all(order: 'name'), include_blank: false
+  = f.association :organization_out, collection: Organization.all(order: 'name'), include_blank: false
   = f.input :realization_231
   = f.input :services_903
   = f.input :store_28
   = f.input :sto_233
   = f.input :availability_ttn_in
   = f.input :availability_ttn_out
+  = f.association :list, collection: @lists, include_blank: false
   = f.button :submit

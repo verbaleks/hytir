@@ -1,0 +1,4 @@
+= simple_form_for @list, html: {class: 'form-horizontal'} do |f|
+  = f.input :number
+  = f.input :driver_id, collection: Driver.all, include_blank: false
+  = f.button :submit

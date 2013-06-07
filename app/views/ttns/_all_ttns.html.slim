@@ -19,6 +19,8 @@
           th= t('.weight_difference')
           th= t('.distance')
           th= t('.diesel')
+          th= t('.transport')
+          th= t('.customer')
           th= t('.organization_in')
           th= t('.organization_out')
           th= t('.realization_231')
@@ -27,6 +29,7 @@
           th= t('.sto_233')
           th= t('.availability_ttn_in')
           th= t('.availability_ttn_out')
+          th= t('.list')
           th
           th
       tbody
@@ -41,21 +44,34 @@
             td= f.point_out
             td= f.invoice_in
             td= f.invoice_out
-            td= link_to f.driver.name, ttns_path( driver: f.driver.id )
+            td= f.driver.name
             td= f.car_number
             td= f.weight_in
             td= f.weight_out
             td= f.weight_difference
             td= f.distance
             td= f.diesel
-            td= f.organization_in
-            td= f.organization_out
+            td
+              - if f.transport
+                = f.transport.name
+            td
+              - if f.customer
+                = f.customer.name
+            td
+              - if f.organization_in
+                = f.organization_in.name
+            td
+              - if f.organization_out
+                = f.organization_out.name
             td= f.realization_231
             td= f.services_903
             td= f.store_28
             td= f.sto_233
             td= f.availability_ttn_in
             td= f.availability_ttn_out
+            td
+              - if f.list
+                = f.list.number
             td= link_to edit_ttn_path(f) do
               i.icon-pencil
             td= link_to f, confirm: t('.are_you_sure'), method: :delete do

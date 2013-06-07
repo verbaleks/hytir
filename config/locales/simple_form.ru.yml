@@ -21,13 +21,15 @@ ru:
         point_out: 'Пункт розвантаження'
         invoice_in: '№ накладної приход'
         invoice_out: '№ накладної расход'
-        driver_id: 'ПІБ водія'
+        driver: 'ПІБ водія'
         car_number: '№ машини'
         weight_in: 'Вага приход'
         weight_out: 'Вага расход'
         weight_difference: 'Різниця'
         distance: 'КМ'
         diesel: 'Дизпаливо'
+        transport: 'Автопідприємство'
+        customer_id: 'Замовник'
         organization_in: 'Організація приход'
         organization_out: 'Організація расход'
         realization_231: 'Реалізація(231)'
@@ -36,5 +38,14 @@ ru:
         sto_233: 'СТО(233)'
         availability_ttn_in: 'Наявність ТТН приход'
         availability_ttn_out: 'Наявність ТТН расход'
+        list: 'Путівка'
       driver:
         name: 'ФІО'
+        description: 'Опис'
+      organization:
+        name: 'Назва'
+      list:
+        number: 'Номер путівки'
+        driver_id: 'ПІБ водія'
+      transport:
+        name: 'Назва'

@@ -5,6 +5,9 @@ Hytir::Application.routes.draw do
   resources :sessions
   resources :ttns
   resources :drivers
+  resources :organizations
+  resources :lists
+  resources :transports
 
   # Sample resource route with sub-resources:
   #   resources :products do
