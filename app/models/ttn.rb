@@ -28,7 +28,7 @@ class Ttn < ActiveRecord::Base
 
   def calculate_difference
     if ( self.weight_in && self.weight_out )
-      self.weight_difference = self.weight_in - self.weight_out
+      self.weight_difference = self.weight_out - self.weight_in
     end
   end
 

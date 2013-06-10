@@ -15,8 +15,8 @@
   = f.input :weight_difference, disabled: true
   = f.input :distance
   = f.input :diesel
-  = f.association :transport, collection: Transport.all(order: 'name'), include_blank: false
-  = f.input :customer_id, collection: Organization.all(order: 'name'), include_blank: false
+  = f.association :transport, collection: Transport.all(order: 'name')
+  = f.input :customer_id, collection: Organization.all(order: 'name')
   = f.association :organization_in, collection: Organization.all(order: 'name'), include_blank: false
   = f.association :organization_out, collection: Organization.all(order: 'name'), include_blank: false
   = f.input :realization_231
