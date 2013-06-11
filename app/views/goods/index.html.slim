@@ -19,5 +19,5 @@
             td= good.name
             td= link_to edit_good_path(good) do
               i.icon-pencil
-            td= link_to good, :method => 'delete' do
+            td= link_to good_path(good), :method => 'delete' do
               i.icon-remove
