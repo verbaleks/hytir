@@ -1,4 +1,11 @@
 ru:
+  transport_create_error: 'Помилка створення автопідприємства'
+  car_create_error: 'Помилка створення нової машини'
+  driver_create_error: 'Помилка створення водія'
+  organization_create_error: 'Помилка створення нової організації'
+  list_create_error: 'Помилка створення нової путівки'
+  good_create_error: 'Помилка створення товару'
+  invalid_login_or_pass: 'Неправильный логін или пароль'
   layouts:
     application:
       navigation:
@@ -11,6 +18,8 @@ ru:
         organizations: 'Організації'
         lists: 'Путівки'
         transports: 'Автопідприємство'
+        goods: 'Товари'
+        cars: 'Машини'
   ttns:
     all_ttns:
       visible: 'Видимість'
@@ -55,42 +64,54 @@ ru:
       login: 'Логін'
       password: 'Пароль'
       log_in: 'Ввійти'
-  invalid_login_or_pass: 'Неправильный логін или пароль'
   drivers:
     new:
       name: 'ФІО'
-      driver_create_error: 'Помилка створення водія'
     index:
       new_driver: 'Новий водій'
       name: 'ФІО'
       id: 'Номер п\п'
       are_you_sure: 'Ви впевнені?'
   organizations:
-        new:
-          name: 'Назва'
-          organizations_create_error: 'Помилка створення нової організації'
-        index:
-          new_organization: 'Нова організація'
-          name: 'Назва'
-          id: 'Номер п\п'
-          are_you_sure: 'Ви впевнені?'
+    new:
+      name: 'Назва'
+    index:
+      new_organization: 'Нова організація'
+      name: 'Назва'
+      id: 'Номер п\п'
+      are_you_sure: 'Ви впевнені?'
   lists:
-      new:
-        number: 'Номер путівки'
-        driver: 'ПІБ водія'
-        list_create_error: 'Помилка створення нової путівки'
-      index:
-        new_list: 'Нова путівка'
-        number: 'Номер путівки'
-        id: 'Номер п\п'
-        driver: 'Водій'
-        are_you_sure: 'Ви впевнені?'
+    new:
+      number: 'Номер путівки'
+      driver: 'ПІБ водія'
+    index:
+      new_list: 'Нова путівка'
+      number: 'Номер путівки'
+      id: 'Номер п\п'
+      driver: 'Водій'
+      are_you_sure: 'Ви впевнені?'
   transports:
     new:
       name: 'Назва'
-      transport_create_error: 'Помилка створення автопідприємства'
+
     index:
       new_transport: 'Новие автопідприємство'
       name: 'Назва'
+      id: 'Номер п\п'
+      are_you_sure: 'Ви впевнені?'
+  cars:
+    new:
+      number: 'Номер авто'
+    index:
+      new_car: 'Нова машина'
+      number: 'Номер машини'
+      id: 'Номер п\п'
+      are_you_sure: 'Ви впевнені?'
+  goods:
+    new:
+      name: 'Назва товару'
+    index:
+      new_good: 'Новий товар'
+      name: 'Назва товару'
       id: 'Номер п\п'
       are_you_sure: 'Ви впевнені?'

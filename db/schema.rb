@@ -11,13 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606211557) do
+ActiveRecord::Schema.define(:version => 20130610192216) do
+
+  create_table "cars", :force => true do |t|
+    t.string   "number"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "drivers", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "goods", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "lists", :force => true do |t|
@@ -44,12 +56,12 @@ ActiveRecord::Schema.define(:version => 20130606211557) do
     t.boolean  "visible"
     t.date     "date_in"
     t.date     "date_out"
-    t.string   "good"
+    t.string   "good_id"
     t.string   "point_in"
     t.string   "point_out"
     t.integer  "invoice_in"
     t.integer  "invoice_out"
-    t.string   "car_number"
+    t.string   "car_id"
     t.integer  "weight_in"
     t.integer  "weight_out"
     t.integer  "weight_difference"

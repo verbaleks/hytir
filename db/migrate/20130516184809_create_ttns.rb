@@ -5,12 +5,12 @@ class CreateTtns < ActiveRecord::Migration
       t.boolean     :visible
       t.date        :date_in
       t.date        :date_out
-      t.string      :good
+      t.string      :good_id
       t.string      :point_in
       t.string      :point_out
       t.integer     :invoice_in
       t.integer     :invoice_out
-      t.string      :car_number
+      t.string      :car_id
       t.integer     :weight_in
       t.integer     :weight_out
       t.integer     :weight_difference

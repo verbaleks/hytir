@@ -1,0 +1,23 @@
+.row-fluid
+  .span2
+    = link_to t('.new_car'), new_car_path, class: 'btn btn-primary btn-large'
+.row-fluid
+  .span12
+    '
+.row-fluid
+  .span12
+    table.table-striped.table-hover.table-bordered
+      thead
+        th= t('.id')
+        th= t('.number')
+        th
+        th
+      tbody
+        - @cars.each do |car|
+          tr
+            td= car.id
+            td= car.number
+            td= link_to edit_car_path(car) do
+              i.icon-pencil
+            td= link_to car, confirm: t('.are_you_sure'), method: :delete do
+              i.icon-remove

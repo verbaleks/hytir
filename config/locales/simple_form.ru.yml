@@ -22,7 +22,7 @@ ru:
         invoice_in: '№ накладної приход'
         invoice_out: '№ накладної расход'
         driver: 'ПІБ водія'
-        car_number: '№ машини'
+        car: '№ машини'
         weight_in: 'Вага приход'
         weight_out: 'Вага расход'
         weight_difference: 'Різниця'
@@ -48,4 +48,8 @@ ru:
         number: 'Номер путівки'
         driver_id: 'ПІБ водія'
       transport:
+        name: 'Назва'
+      car:
+        number: 'Номер'
+      good:
         name: 'Назва'

@@ -8,7 +8,7 @@ class TransportsController < ApplicationController
     if @transport.save
       redirect_to transports_path
     else
-      flash.now[:error] = I18n.t('transport_create_error')
+      flash.now[:error] = I18n.t('.transport_create_error')
       render action: :new
     end
   end

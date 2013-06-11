@@ -2,10 +2,12 @@ class Ttn < ActiveRecord::Base
   attr_accessible :date_in, :date_out, :good, :point_in, :point_out, :invoice_in, :invoice_out, :driver_id, :car_number,
                   :weight_in, :weight_out, :weight_difference, :distance, :diesel, :transport_id, :customer_id, :organization_in_id, :organization_out_id,
                   :realization_231, :services_903, :store_28, :sto_233, :availability_ttn_in, :availability_ttn_out,
-                  :visible, :type_of, :list_id
+                  :visible, :type_of, :list_id, :good_id, :car_id
 
   belongs_to :list
   belongs_to :driver
+  belongs_to :good
+  belongs_to :car
   belongs_to :transport
   belongs_to :customer, class_name: Organization, foreign_key: 'customer_id'
   belongs_to :organization_in, class_name: Organization, foreign_key: 'organization_in_id'

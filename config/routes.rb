@@ -8,6 +8,8 @@ Hytir::Application.routes.draw do
   resources :organizations
   resources :lists
   resources :transports
+  resources :cars
+  resources :goods
 
   # Sample resource route with sub-resources:
   #   resources :products do
