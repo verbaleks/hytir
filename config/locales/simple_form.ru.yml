@@ -22,6 +22,7 @@ ru:
         invoice_in: '№ накладної приход'
         invoice_out: '№ накладної расход'
         driver: 'ПІБ водія'
+        description: 'Опис'
         car: '№ машини'
         weight_in: 'Вага приход'
         weight_out: 'Вага расход'

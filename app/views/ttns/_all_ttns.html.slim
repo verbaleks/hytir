@@ -13,6 +13,7 @@
           th= t('.invoice_in')
           th= t('.invoice_out')
           th= t('.driver')
+          th= t('.description')
           th= t('.car_number')
           th= t('.weight_in')
           th= t('.weight_out')
@@ -39,13 +40,20 @@
             td= f.type_of
             td= f.date_in
             td= f.date_out
-            td= f.good.name
+            td
+              -if f.good
+                = f.good.name
             td= f.point_in
             td= f.point_out
             td= f.invoice_in
             td= f.invoice_out
-            td= f.driver.name
-            td= f.car.number
+            td
+              - if f.driver
+                = f.driver.name
+            td= f.description
+            td
+              - if f.car
+                = f.car.number
             td= f.weight_in
             td= f.weight_out
             td= f.weight_difference
@@ -74,5 +82,5 @@
                 = f.list.number
             td= link_to edit_ttn_path(f) do
               i.icon-pencil
-            td= link_to f, confirm: t('.are_you_sure'), method: :delete do
+            td= link_to ttn_path(f), confirm: t('.are_you_sure'), method: :delete do
               i.icon-remove

@@ -13,6 +13,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass' # Sass-powered version of Twitter's Bootstrap
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-datepicker-rails'
 end
 
 group :development, :test do

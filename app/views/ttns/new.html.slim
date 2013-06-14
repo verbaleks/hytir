@@ -9,6 +9,7 @@
   = f.input :invoice_in
   = f.input :invoice_out
   = f.association :driver, collection: Driver.all(order: 'name'), include_blank: false
+  = f.input :description
   = f.association :car, collection: Car.all.map{ |car| [car.number, car.id] }, include_blank: false
   = f.input :weight_in
   = f.input :weight_out

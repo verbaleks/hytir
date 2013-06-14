@@ -35,6 +35,7 @@ ru:
       invoice_in: '№ накладної приход'
       invoice_out: '№ накладної расход'
       driver: 'ПІБ водія'
+      description: 'Опис'
       car_number: '№ машини'
       weight_in: 'Вага приход'
       weight_out: 'Вага расход'
@@ -52,6 +53,7 @@ ru:
       availability_ttn_in: 'Наявність ТТН приход'
       availability_ttn_out: 'Наявність ТТН расход'
       list: 'Путівка'
+      are_you_sure: 'Ви впевнені?'
     search_form:
       visibility: 'ВИДИМІСТЬ'
       driver: 'ВОДІЙ'
