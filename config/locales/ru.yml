@@ -60,6 +60,8 @@ ru:
       type: 'ТИП'
       organization_in_id: 'ОРГАНІЗАЦІЯ ПРИХОД'
       organization_out_id: 'ОРГАНІЗАЦІЯ РАСХОД'
+      transport_id: 'АВТОПІДПРИЄМСТВО'
+      customer_id: 'ЗАМОВНИК'
       filter: 'фільтр'
   sessions:
     new:

@@ -1,10 +1,20 @@
 .row-fluid
   .span12
     = form_tag ttns_path, class: 'form-inline', method: 'get' do
-      = select_tag :visible, options_for_select([['видимі', true],['невидимі', false]], params[:visible]), prompt: t('.visibility')
-      = select_tag :driver_id, options_from_collection_for_select(@drivers, "id", "name", params[:driver_id]), prompt: t('.driver')
-      = select_tag :type_of, options_for_select([['послуги', 1],['реалізація', 2], ['склад', 3]], params[:type_of]), prompt: t('.type')
-      = select_tag :organization_in_id, options_from_collection_for_select(@organizations, "id", "name", params[:organization_in_id]), prompt: t('.organization_in_id')
-      = select_tag :organization_out_id, options_from_collection_for_select(@organizations, "id", "name", params[:organization_out_id]), prompt: t('.organization_out_id')
-      = submit_tag t('.filter'), :name => nil
+      .row-fluid
+        .span12
+          = text_field_tag :from, params[:from]
+          = text_field_tag :to, params[:to]
+      .row-fluid
+        .span12
+          = select_tag :visible, options_for_select([['видимі', true],['невидимі', false]], params[:visible]), prompt: t('.visibility'), class: 'input-medium'
+          = select_tag :type_of, options_for_select([['послуги', 1],['реалізація', 2], ['склад', 3]], params[:type_of]), prompt: t('.type'), class: 'input-small'
+          = select_tag :driver_id, options_from_collection_for_select(@drivers, "id", "name", params[:driver_id]), prompt: t('.driver'), class: 'input-medium'
+      .row-fluid
+        .span12
+          = select_tag :transport_id, options_from_collection_for_select(@transports, "id", "name", params[:transport_id]), prompt: t('.transport_id'), class: 'input-large'
+          = select_tag :customer_id, options_from_collection_for_select(@organizations, "id", "name", params[:customer_id]), prompt: t('.customer_id'), class: 'input-medium'
+          = select_tag :organization_in_id, options_from_collection_for_select(@organizations, "id", "name", params[:organization_in_id]), prompt: t('.organization_in_id'), class: 'input-large'
+          = select_tag :organization_out_id, options_from_collection_for_select(@organizations, "id", "name", params[:organization_out_id]), prompt: t('.organization_out_id'), class: 'input-large'
+          = submit_tag t('.filter'), :name => nil
 

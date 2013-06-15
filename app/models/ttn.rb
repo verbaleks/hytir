@@ -17,10 +17,12 @@ class Ttn < ActiveRecord::Base
 
   def self.filter_by_params(params)
     scoped = self.scoped
+    scoped = scoped.where(:date_in => (params[:from].to_date...params[:to].to_date)) if params[:from].present? && params[:to].present?
     scoped = scoped.where(:visible => params[:visible]) if params[:visible].present?
     scoped = scoped.where(:type_of => params[:type_of]) if params[:type_of].present?
     scoped = scoped.where(:driver_id => params[:driver_id]) if params[:driver_id].present?
     scoped = scoped.where(:transport_id => params[:transport_id]) if params[:transport_id].present?
+    scoped = scoped.where(:customer_id => params[:customer_id]) if params[:customer_id].present?
     scoped = scoped.where(:organization_in_id => params[:organization_in_id]) if params[:organization_in_id].present?
     scoped = scoped.where(:organization_out_id => params[:organization_out_id]) if params[:organization_out_id].present?
     scoped

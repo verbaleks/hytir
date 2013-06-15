@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+.ttns {
+  table {
+    font-size: 12px;
+    thead {
+      font-size: 10px;
+    }
+  }
+}
