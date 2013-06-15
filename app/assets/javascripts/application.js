@@ -25,10 +25,7 @@ $(function() {
     language: 'ru',
     todayHighlight: true,
     todayBtn: true,
-    autoclose: true,
-    onClose: function( selectedDate ) {
-      $( "#to" ).datepicker( "option", "minDate", selectedDate );
-    }
+    autoclose: true
   });
   $( "#to" ).datepicker({
     defaultDate: "+1w",
@@ -38,9 +35,6 @@ $(function() {
     language: 'ru',
     todayHighlight: true,
     todayBtn: true,
-    autoclose: true,
-    onClose: function( selectedDate ) {
-      $( "#from" ).datepicker( "option", "maxDate", selectedDate );
-    }
+    autoclose: true
   });
 });
