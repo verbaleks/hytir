@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'pg'
-gem 'slim' # A lightweight templating engine
+gem 'slim'
 gem 'slim-rails' # A lightweight templating engine
 gem 'russian'
 gem 'simple_form'
